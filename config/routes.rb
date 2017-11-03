@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'setlists/index'
+
+  get 'setlists/new'
+
+  get 'setlists/show'
+
   get 'users/login'
 
   get 'users/new'
