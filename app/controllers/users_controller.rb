@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path, notice: "You're signed up!"
+      redirect_to root_url, notice: "You're signed up!"
     else
       render "new"
       flash[:notice] = "Form is invalid"
@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find_by(params[:id])
   end
 
   private
