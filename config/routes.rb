@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
+  get 'home/index'
+
   get 'songs/new'
 
   get 'songs/create'
