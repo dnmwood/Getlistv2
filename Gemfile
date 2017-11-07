@@ -9,6 +9,8 @@ end
 gem 'pg'
 # Bootstrap :)
 gem 'bootstrap-sass', '~> 3.3.6'
+#simple_form for simple forms
+gem 'simple_form'
 # Autoprefixer
 gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
