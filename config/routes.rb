@@ -1,15 +1,7 @@
 Rails.application.routes.draw do
-  get 'setlists/index'
+  resources :users
 
-  get 'setlists/new'
-
-  get 'setlists/show'
-
-  get 'users/login'
-
-  get 'users/new'
-
-  get 'users/show'
-
+  resources :sessions, only: [:new, :create, :destroy]
+  root 'sessions#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
