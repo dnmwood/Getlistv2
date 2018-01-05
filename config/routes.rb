@@ -1,21 +1,15 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  root 'sessions#new'
 
-  get 'home/index'
+  resources :users do
+    resources :dashboard, only: [:index]
+    resources :setlists
+    resources :songs
+  end
 
-  get 'songs/new'
-
-  get 'songs/create'
-
-  get 'songs/update'
-
-  get 'songs/destroy'
-
-  resources :users
-  resources :setlists
-  resources :songs
+  get '/dashboard', to: 'dashboard#index'
+  get '/login', to: 'sessions#new'
 
   resources :sessions, only: [:new, :create, :destroy]
-  root 'sessions#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
