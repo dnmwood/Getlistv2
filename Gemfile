@@ -8,6 +8,7 @@ end
 # Postgres as database for Active Record
 gem 'pg'
 # Bootstrap :)
+gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 #simple_form for simple forms
 gem 'simple_form'
