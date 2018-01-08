@@ -1,2 +1,6 @@
 <h2>Setlist Index</h2>
 This is where your user's setlists will appear.
+
+<% @setlists.each do |x| %>
+  <%= x.title %>
+<% end %>
