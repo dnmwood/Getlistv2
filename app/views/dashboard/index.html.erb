@@ -1,8 +1,8 @@
 <h2>DASHBOARD</h2>
 
 <br>
-hello <%= current_user.email %>
+hello <%= current_user.name %>
 
-<h4><%= link_to "Manage Your Songbook", user_songs_path(@user_id) %></h4>
-<h4><%= link_to "Manage Your Setlists", user_setlists_path(@user_id) %></h4>
-<h4><%= link_to "Create New Setlist", new_user_setlist_path(@user_id) %></h4>
+<h4><%= link_to "Manage Your Songbook", songs_path(@user_id) %></h4>
+<h4><%= link_to "Manage Your Setlists", setlists_path(@user_id) %></h4>
+<h4><%= link_to "Create New Setlist", new_setlist_path(@user_id) %></h4>
