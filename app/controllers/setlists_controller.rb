@@ -11,8 +11,12 @@ class SetlistsController < ApplicationController
   def create
     @setlist = Setlist.new(setlist_params)
 
+    if current_user
+      @setlist.user_id = current_user.id
+    end
+
     if @setlist.save
-      redirect_to setlists_path, notice: "Your setlist was created!"
+      redirect_to '/dashboard'
     else
       render :new
     end
