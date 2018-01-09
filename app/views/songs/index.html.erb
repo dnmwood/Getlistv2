@@ -1,6 +1,12 @@
-<h1>song index</h1>
-<h4><%= link_to "Add song", new_song_path %></h4>
+<div class="row">
+  <div class="col-md-6 col-md-offset-5">
 
-<% current_user.songs.each do |song| %>
-<%= song.title %>
-<% end %>
+    <h1>Songbook</h1>
+    <h4><%= link_to "Add song", new_song_path %></h4>
+
+    <% current_user.songs.each do |song| %>
+      <%= song.title %>
+    <% end %>
+
+  </div>
+</div>

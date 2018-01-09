@@ -16,7 +16,7 @@ class SetlistsController < ApplicationController
     end
 
     if @setlist.save
-      redirect_to '/dashboard'
+      redirect_to setlist_path(@setlist)
     else
       render :new
     end
@@ -32,7 +32,7 @@ class SetlistsController < ApplicationController
   end
 
   def show
-    @setlist = Setlist.find_by(params[:id])
+    @setlist = Setlist.find(params[:id])
   end
 
   private

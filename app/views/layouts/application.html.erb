@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <% if current_user %>
+              Hello <%= current_user.name %>
+              <%= link_to "Log Out", session_path("current"), method: "delete" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+      <%= yield %>
+    
   </body>
 </html>
