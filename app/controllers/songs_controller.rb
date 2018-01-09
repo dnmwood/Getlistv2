@@ -11,10 +11,14 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
 
+    if current_user
+      @song.user_id = current_user.id
+    end
+
     if @song.save
-      redirect_to songs_url, notice: "You have created a song!"
+      redirect_to songs_url
     else
-      redirect_to '/dashboard', alert: "Nadda!"
+      render :new
     end
   end
 

@@ -1,6 +1,6 @@
 <h1>song index</h1>
 <h4><%= link_to "Add song", new_song_path %></h4>
 
-<% @songs.each do |song| %>
+<% current_user.songs.each do |song| %>
 <%= song.title %>
 <% end %>
