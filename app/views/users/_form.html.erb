@@ -17,7 +17,13 @@
             <div class="form-group col-submit">
               <div class="field-title">
                 <h5 class="5header">Enter Your Name Here!</h5>
-                <%= f.text_field :name, placeholder: "First and last name", :class => "form-control" %>
+                <%= f.text_field :first_name, placeholder: "First name", :class => "form-control" %>
+              </div>
+            </div>
+            <div class="form-group col-submit">
+              <div class="field-title">
+                <h5 class="5header"></h5>
+                <%= f.text_field :last_name, placeholder: "Last name", :class => "form-control" %>
               </div>
             </div>
             <div class="form-group col-submit">

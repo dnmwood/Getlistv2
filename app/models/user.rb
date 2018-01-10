@@ -2,7 +2,8 @@ class User < ApplicationRecord
   has_secure_password
   before_save { email.downcase! }
 
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :first_name, presence: true, length: { maximum: 50 }
+  validates :last_name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 50 },
                     uniqueness: { case_sensitive: false }
 
