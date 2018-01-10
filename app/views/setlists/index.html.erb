@@ -6,8 +6,8 @@
 
       This is where your user's setlists will appear.
 
-      <% current_user.setlists.each do |x| %>
-        <%= x.title %>
+      <% current_user.setlists.each do |setlist| %>
+        <h3><%= link_to "#{setlist.title}", setlist_path(setlist) %></h3>
       <% end %>
 
     </div>
