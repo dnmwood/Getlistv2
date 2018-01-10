@@ -1,12 +1,14 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-5">
+<div class="container">
+  <div class="row">
+    <div class="text-center">
 
     <h1>Songbook</h1>
     <h4><%= link_to "Add song", new_song_path %></h4>
-
     <% current_user.songs.each do |song| %>
       <%= song.title %>
     <% end %>
 
+    <h4><%= link_to "Back", dashboard_path %></h4>
+    </div>
   </div>
 </div>

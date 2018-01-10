@@ -4,12 +4,13 @@
 
       <h2>Setlist Index</h2>
 
-      This is where your user's setlists will appear.
+      This is where your setlists will appear.
 
       <% current_user.setlists.each do |setlist| %>
         <h3><%= link_to "#{setlist.title}", setlist_path(setlist) %></h3>
       <% end %>
 
+      <h4><%= link_to "Back", dashboard_path %></h4>
     </div>
   </div>
 </div>
