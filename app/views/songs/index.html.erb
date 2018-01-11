@@ -4,8 +4,16 @@
 
     <h1>Songbook</h1>
     <h4><%= link_to "Add song", new_song_path %></h4>
+
     <% current_user.songs.each do |song| %>
-      <%= song.title %>
+
+    <div class="row">
+      <div class="well col-sm-4 col-md-offset-4">
+
+        <%= song.title %> <%= song.minutes %>:<%= song.seconds %>
+
+      </div>
+    </div>
     <% end %>
 
     <h4><%= link_to "Back", dashboard_path %></h4>
