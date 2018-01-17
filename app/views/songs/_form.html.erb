@@ -9,8 +9,13 @@
         <%= f.label :title %>
         <%= f.text_field :title, :class => "form-control" %>
 
-        <%= f.label :duration %>
-        <%= f.number_field :duration, :class => "form-control" %>
+        <%= f.label :minutes %>
+        <%= f.number_field :minutes, :class => "form-control" %>
+
+        <%= f.label :seconds %>
+        <%= f.number_field :seconds, :class => "form-control" %>
+
+        <br>
 
         <%= f.submit "Submit", :class=>"btn btn-primary" %>
       <% end %>

@@ -11,6 +11,7 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
 
+    # @song.minutes = (params[:song][:minutes] * 60)
     if current_user
       @song.user_id = current_user.id
     end
@@ -34,6 +35,6 @@ class SongsController < ApplicationController
 
   private
   def song_params
-    params.require(:song).permit(:title, :duration)
+    params.require(:song).permit(:title, :minutes, :seconds)
   end
 end
